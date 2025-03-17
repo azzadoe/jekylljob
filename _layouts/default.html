@@ -20,10 +20,8 @@
 
 {% seo %}
 
-<link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<noscript>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-</noscript>
+<link rel="stylesheet" href="/assets/css/theme.min.css">
+
 
 <!--
 <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -65,82 +63,367 @@ ga('send', 'pageview');
 
 <!-- Begin Menu Navigation
 ================================================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
-
-    <div class="container pr-0">
-
-    <!-- Begin Logo -->
-    <a class="navbar-brand" href="{{ site.baseurl }}/">
-    <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
-    </a>
-    <!-- End Logo -->
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarMediumish">
-
-        <!-- Begin Menu -->
-
-            <ul class="navbar-nav ml-auto">
-
-                {% if page.url == "/" %}
-                <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/index.html">Home</a>
-                </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/categories#tutorial">Blogger</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="/categories#tutorial">Tutorial</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="/ppt">PPT</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="/categories#teknologi">Teknologi</a>
-                </li>
-                <li class="nav-item">
-                    <a target="_blank" class="nav-link" href="/categories#pendidikan"> Pendidikan</a>
-                    </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href=""> Kelas Blogger</a>
-                </li>
-
-                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown">
-                        <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                          Dropdown
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid px-0">
+       <div class="d-flex">
+          <a class="navbar-brand" href="https://geeksui.codescandy.com/geeks/index.html">
+          <img src="https://geeksui.codescandy.com/geeks/assets/images/brand/logo/logo.svg" alt="Geeks high quality website templates created with Bootstrap 5." />
+          </a>
+          <div class="dropdown d-none d-md-block">
+             <button
+                class="btn btn-light-primary text-primary"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+             <i class="fe fe-list me-2 align-middle"></i>
+             Category
+             </button>
+             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="dropdown-submenu dropend">
+                   <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Web Development</a>
+                   <ul class="dropdown-menu">
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Bootstrap</a>
                       </li>
-                    </ul>
-                  </div>
-
-                {% include search-lunr.html %}
-
-            </ul>
-
-        <!-- End Menu -->
-
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">React</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">GraphQl</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Gatsby</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Grunt</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Svelte</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Meteor</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">HTML5</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Angular</a>
+                      </li>
+                   </ul>
+                </li>
+                <li class="dropdown-submenu dropend">
+                   <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Design</a>
+                   <ul class="dropdown-menu">
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Graphic Design</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Illustrator</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">UX / UI Design</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Figma Design</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Adobe XD</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Sketch</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Icon Design</a>
+                      </li>
+                      <li>
+                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Photoshop</a>
+                      </li>
+                   </ul>
+                </li>
+                <li>
+                   <a href="https://geeksui.codescandy.com/geeks/pages/course-category.html" class="dropdown-item">Mobile App</a>
+                </li>
+                <li>
+                   <a href="https://geeksui.codescandy.com/geeks/pages/course-category.html" class="dropdown-item">IT Software</a>
+                </li>
+                <li>
+                   <a href="https://geeksui.codescandy.com/geeks/pages/course-category.html" class="dropdown-item">Marketing</a>
+                </li>
+                <li>
+                   <a href="https://geeksui.codescandy.com/geeks/pages/course-category.html" class="dropdown-item">Music</a>
+                </li>
+                <li>
+                   <a href="https://geeksui.codescandy.com/geeks/pages/course-category.html" class="dropdown-item">Life Style</a>
+                </li>
+                <li>
+                   <a href="https://geeksui.codescandy.com/geeks/pages/course-category.html" class="dropdown-item">Business</a>
+                </li>
+                <li>
+                   <a href="https://geeksui.codescandy.com/geeks/pages/course-category.html" class="dropdown-item">Photography</a>
+                </li>
+             </ul>
+          </div>
+       </div>
+       <div class="order-lg-3">
+          <div class="d-flex align-items-center">
+             <div class="dropdown me-2">
+                <button
+                   class="btn btn-light btn-icon rounded-circle d-flex align-items-center bd-theme"
+                   type="button"
+                   aria-expanded="false"
+                   data-bs-toggle="dropdown"
+                   aria-label="Toggle theme (auto)">
+                <i class="bi theme-icon-active"></i>
+                <span class="visually-hidden bs-theme-text">Toggle theme</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bs-theme-text">
+                   <li>
+                      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                      <i class="bi theme-icon bi-sun-fill"></i>
+                      <span class="ms-2">Light</span>
+                      </button>
+                   </li>
+                   <li>
+                      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                      <i class="bi theme-icon bi-moon-stars-fill"></i>
+                      <span class="ms-2">Dark</span>
+                      </button>
+                   </li>
+                   <li>
+                      <button
+                         type="button"
+                         class="dropdown-item d-flex align-items-center active"
+                         data-bs-theme-value="auto"
+                         aria-pressed="true">
+                      <i class="bi theme-icon bi-circle-half"></i>
+                      <span class="ms-2">Auto</span>
+                      </button>
+                   </li>
+                </ul>
+             </div>
+             <span class="d-none d-md-block">
+             <a href="#" class="btn btn-icon btn-light rounded-circle"><i class="fe fe-shopping-cart align-middle"></i></a>
+             </span>
+             <a href="https://geeksui.codescandy.com/geeks/pages/sign-in.html" class="btn btn-outline-primary ms-2">Sign in</a>
+             <a href="https://geeksui.codescandy.com/geeks/pages/sign-up.html" class="btn btn-primary ms-1 d-none d-lg-block">Sign up</a>
+             <!-- Button -->
+             <button
+                class="navbar-toggler collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-default2"
+                aria-controls="navbar-default2"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+             <span class="icon-bar top-bar mt-0"></span>
+             <span class="icon-bar middle-bar"></span>
+             <span class="icon-bar bottom-bar"></span>
+             </button>
+          </div>
+       </div>
+       <!-- Collapse -->
+       <div class="collapse navbar-collapse" id="navbar-default2">
+          <ul class="navbar-nav mx-auto">
+             <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+             </li>
+             <li class="nav-item dropdown">
+                <a
+                   class="nav-link dropdown-toggle"
+                   href="#"
+                   id="navbarDropdown"
+                   data-bs-toggle="dropdown"
+                   aria-haspopup="true"
+                   aria-expanded="false"
+                   data-bs-display="static">
+                Dropdown
+                </a>
+                <ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarDropdown">
+                   <li class="dropdown-submenu dropend">
+                      <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Dropdown</a>
+                      <ul class="dropdown-menu">
+                         <li>
+                            <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Action Link</a>
+                         </li>
+                         <li>
+                            <a href="#!" class="dropdown-item">Anthor Action</a>
+                         </li>
+                         <li>
+                            <a href="#!" class="dropdown-item">Something else here</a>
+                         </li>
+                      </ul>
+                   </li>
+                   <li>
+                      <a href="#!" class="dropdown-item">Action Link</a>
+                   </li>
+                   <li>
+                      <a href="#!" class="dropdown-item">Anthor Action</a>
+                   </li>
+                   <li>
+                      <a href="#!" class="dropdown-item">Something else here</a>
+                   </li>
+                </ul>
+             </li>
+             <li class="nav-item dropdown dropdown-fullwidth">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mega Menu</a>
+                <div class="dropdown-menu dropdown-menu-md">
+                   <div class="px-4 pt-2 pb-2">
+                      <div class="row">
+                         <div class="col-12">
+                            <div class="lh-1 mb-5">
+                               <h3 class="mb-1">Earn a Degree</h3>
+                               <p>Breakthrough pricing on 100% online degrees designed to fit into your life.</p>
+                            </div>
+                         </div>
+                         <div class="col-lg-4 col-12">
+                            <div class="border-bottom pb-2 mb-3">
+                               <h5 class="mb-0">Degrees</h5>
+                            </div>
+                            <div>
+                               <a href="#">
+                                  <div class="d-flex mb-3">
+                                     <img src="https://geeksui.codescandy.com/geeks/assets/images/png/degree-1.png" alt="" />
+                                     <div class="ms-2">
+                                        <small class="text-body">University of Michigan</small>
+                                        <h6 class="mb-0">Master of Applied Data Science</h6>
+                                     </div>
+                                  </div>
+                               </a>
+                               <a href="#">
+                                  <div class="d-flex mb-3">
+                                     <img src="https://geeksui.codescandy.com/geeks/assets/images/png/degree-2.png" alt="" />
+                                     <div class="ms-2">
+                                        <small class="text-body">A&B College 1980</small>
+                                        <h6 class="mb-0">MBA in Business Analytics</h6>
+                                     </div>
+                                  </div>
+                               </a>
+                               <a href="#">
+                                  <div class="d-flex mb-3">
+                                     <img src="https://geeksui.codescandy.com/geeks/assets/images/png/degree-3.png" alt="" />
+                                     <div class="ms-2">
+                                        <small class="text-body">Imperial College London</small>
+                                        <h6 class="mb-0">Master of Science in Machine</h6>
+                                     </div>
+                                  </div>
+                               </a>
+                               <a href="#">
+                                  <div class="d-flex mb-3">
+                                     <img src="https://geeksui.codescandy.com/geeks/assets/images/png/degree-4.png" alt="" />
+                                     <div class="ms-2">
+                                        <small class="text-body">University of Colorado</small>
+                                        <h6 class="mb-0">Master of Computer Science</h6>
+                                     </div>
+                                  </div>
+                               </a>
+                               <div class="mt-4">
+                                  <a href="#" class="btn btn-outline-primary btn-sm">View all degree</a>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-4 col-12 mt-4 mt-lg-0">
+                            <div class="border-bottom pb-2 mb-3">
+                               <h5 class="mb-0">Certificate Programs</h5>
+                            </div>
+                            <div>
+                               <a href="#">
+                                  <div class="d-flex mb-3">
+                                     <img src="https://geeksui.codescandy.com/geeks/assets/images/png/google.png" alt="" />
+                                     <div class="ms-2">
+                                        <small class="text-body">No Prerequisites</small>
+                                        <h6 class="mb-0">Google Data Analytics</h6>
+                                     </div>
+                                  </div>
+                               </a>
+                               <a href="#">
+                                  <div class="d-flex mb-3">
+                                     <img src="https://geeksui.codescandy.com/geeks/assets/images/png/IBM.png" alt="" />
+                                     <div class="ms-2">
+                                        <small class="text-body">No Prerequisites</small>
+                                        <h6 class="mb-0">IBM Data Science</h6>
+                                     </div>
+                                  </div>
+                               </a>
+                               <a href="#">
+                                  <div class="d-flex mb-3">
+                                     <img src="https://geeksui.codescandy.com/geeks/assets/images/png/microsoft.png" alt="" />
+                                     <div class="ms-2">
+                                        <small class="text-body">Expert Feedback</small>
+                                        <h6 class="mb-0">Machine Leaning for Analytics</h6>
+                                     </div>
+                                  </div>
+                               </a>
+                               <a href="#">
+                                  <div class="d-flex mb-3">
+                                     <img src="https://geeksui.codescandy.com/geeks/assets/images/png/tensorflow.png" alt="" />
+                                     <div class="ms-2">
+                                        <small class="text-body">Certification Prerequisites</small>
+                                        <h6 class="mb-0">TensorFlow Developer Certificate</h6>
+                                     </div>
+                                  </div>
+                               </a>
+                               <a href="#">
+                                  <div class="d-flex mb-3">
+                                     <img src="https://geeksui.codescandy.com/geeks/assets/images/png/meta.png" alt="" />
+                                     <div class="ms-2">
+                                        <small class="text-body">University of Colorado</small>
+                                        <h6 class="mb-0">Meta Marketing Analytics</h6>
+                                     </div>
+                                  </div>
+                               </a>
+                               <div class="mt-4">
+                                  <a href="#" class="btn btn-outline-primary btn-sm">View all Certificates</a>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-4 col-12 mt-4 mt-lg-0">
+                            <div class="border-bottom pb-2 mb-3">
+                               <h5 class="mb-0">Popular Skills</h5>
+                            </div>
+                            <div>
+                               <ul class="nav flex-column">
+                                  <li class="nav-item">
+                                     <a href="#" class="nav-link">Python</a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a href="#" class="nav-link">SQL</a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a href="#" class="nav-link">Microsoft Excel</a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a href="#" class="nav-link">Machine Learning</a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a href="#" class="nav-link">Data Science</a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a href="#" class="nav-link">Data Analytics</a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a href="#" class="nav-link">Power BI</a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a href="#" class="nav-link">Artificial Intelligence</a>
+                                  </li>
+                               </ul>
+                               <div class="mt-4">
+                                  <a href="#" class="btn btn-outline-primary btn-sm">View all Skills</a>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </li>
+          </ul>
+       </div>
     </div>
-
-    </div>
-</nav>
+ </nav>
 <!-- End Navigation
 ================================================== -->
 
@@ -182,7 +465,6 @@ ga('send', 'pageview');
 </div>
 
 <!-- Categories Jumbotron
-================================================== -->
 <div class="jumbotron fortags">
 	<div class="d-md-flex h-100">
 		<div class="col-md-4 transpdark align-self-center text-center h-100">
@@ -206,29 +488,179 @@ ga('send', 'pageview');
 	</div>
 </div>
 
-<!-- Begin Footer
-================================================== -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-6 text-center text-lg-left">
-                Copyright © {{ site.time | date: "%Y" }} {{ site.name }}  | <a href="https://pediaku.id/sitemap.xml">Sitemap</a> | <a href="https://pediaku.id/feed.xml">Feed</a> | <a href="https://panel.seedbacklink.com/aff/RTUA7" class="nav-link active" aria-current="page">
-                      <img src="/assets/images/seedbacklink.webp" alt="seed backlink" class="bi pe-none me-2" width="16" height="16"></img>
-                      Order via Seedbacklink
-                    </a>
-                  
- 
-                  
-            </div>
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
-                Made With &#10084;	from Wakanda by <a href="https://pediaku.id">Pediaku ID</a>
-            </div>
-        </div>
-    </div>
 
- 
-    
-</footer>
+================================================== -->
+    <!-- footer -->
+    <footer class="pt-lg-10 pt-5 footer bg-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+              <!-- about company -->
+              <div class="mb-4">
+                <img src="https://geeksui.codescandy.com/geeks/assets/images/brand/logo/logo.svg" alt="" class="logo-inverse ">
+                <div class="mt-4">
+                  <p>Geek is feature-rich components and beautifully Bootstrap UIKit for developers, built with bootstrap
+                    responsive framework.</p>
+                  <!-- social media -->
+                  <div class="fs-4 mt-4">
+                    <!--Facebook-->
+                    <a href="#" class=" me-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                        </svg>
+                  </a>
+                  <!--Twitter-->
+                  <a href="#" class=" me-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                        </svg>
+                  </a>
+      
+                  <!--GitHub-->
+                  <a href="#" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="offset-lg-1 col-lg-2 col-md-3 col-6">
+              <div class="mb-4">
+                <!-- list -->
+                <h3 class="fw-bold mb-3">Company</h3>
+                <ul class="list-unstyled nav nav-footer flex-column nav-x-0">
+                    {% assign categories_list = site.categories %}
+                    {% if categories_list.first[0] == null %}
+                        {% for category in categories_list %}
+                            <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+                        {% endfor %}
+                    {% else %}
+                        {% for category in categories_list %}
+                            <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
+                        {% endfor %}
+                    {% endif %}
+                    {% assign categories_list = nil %}
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+              <div class="mb-4">
+                <!-- list -->
+                <h3 class="fw-bold mb-3">Support</h3>
+                <ul class="list-unstyled nav nav-footer flex-column nav-x-0">
+                  <li><a href="#" class="nav-link">Help and Support</a></li>
+                  <li><a href="#" class="nav-link">Become Instructor</a></li>
+                  <li><a href="#" class="nav-link">Get the app</a></li>
+                  <li><a href="#" class="nav-link">FAQ’s</a></li>
+                  <li><a href="#" class="nav-link">Tutorial</a></li>
+                </ul>
+      
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+              <!-- contact info -->
+              <div class="mb-4">
+                <h3 class="fw-bold mb-3">Get in touch</h3>
+                <p>339 McDermott Points Hettingerhaven, NV 15283</p>
+                <p class="mb-1">Email: <a href="#">support@geeksui.com</a></p>
+                <p>Phone: <span class="text-dark fw-semibold">(000) 123 456 789</span></p>
+                <div class="d-flex">
+                  <a href="#"><img src="https://geeksui.codescandy.com/geeks/assets/images/svg/appstore.svg" alt="" class="img-fluid"></a>
+                  <a href="#" class="ms-2"><img src="https://geeksui.codescandy.com/geeks/assets/images/svg/playstore.svg" alt=""
+                      class="img-fluid"></a>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center g-0 border-top py-2 mt-6">
+            <!-- Desc -->
+            <div class="col-md-10 col-12">
+              <div class="d-lg-flex align-items-center">
+                <div class="me-4">
+                  <span>© <span id="copyright5">
+                    <script>document.getElementById('copyright5').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                </span> Geeks-UI</span>
+                </div>
+                <div>
+                  <nav class="nav nav-footer">
+                    <a class="nav-link ps-0" href="#">Privacy Policy</a>
+                    <a class="nav-link px-2 px-md-3" href="#">Cookie Notice </a>
+                    <a class="nav-link d-none d-lg-block" href="#">Do Not Sell My Personal Information </a>
+                    <a class="nav-link" href="#">Terms of Use</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Links -->
+            <div class="col-12  col-md-2 d-md-flex justify-content-end">
+              <div class="dropdown">
+                <a href="#" class="dropdown-toggle text-body" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fe fe-globe me-2 align-middle"></i>Language
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item " href="#"><span class="me-2">
+                        <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_5543_19736)">
+                            <path d="M0 0.5H16V12.5H0V0.5Z" fill="#012169" />
+                            <path
+                              d="M1.875 0.5L7.975 5.025L14.05 0.5H16V2.05L10 6.525L16 10.975V12.5H14L8 8.025L2.025 12.5H0V11L5.975 6.55L0 2.1V0.5H1.875Z"
+                              fill="white" />
+                            <path
+                              d="M10.6 7.525L16 11.5V12.5L9.225 7.525H10.6ZM6 8.025L6.15 8.9L1.35 12.5H0L6 8.025ZM16 0.5V0.575L9.775 5.275L9.825 4.175L14.75 0.5H16ZM0 0.5L5.975 4.9H4.475L0 1.55V0.5Z"
+                              fill="#C8102E" />
+                            <path d="M6.025 0.5V12.5H10.025V0.5H6.025ZM0 4.5V8.5H16V4.5H0Z" fill="white" />
+                            <path d="M0 5.325V7.725H16V5.325H0ZM6.825 0.5V12.5H9.225V0.5H6.825Z" fill="#C8102E" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_5543_19736">
+                              <rect width="16" height="12" fill="white" transform="translate(0 0.5)" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>English</a></li>
+                  <li><a class="dropdown-item " href="#"><span class="me-2">
+      
+                        <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_5543_19744)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.5H16V12.5H0V0.5Z" fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.5H5.3325V12.5H0V0.5Z" fill="#002654" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.668 0.5H16.0005V12.5H10.668V0.5Z"
+                              fill="#CE1126" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_5543_19744">
+                              <rect width="16" height="12" fill="white" transform="translate(0 0.5)" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>Français</a></li>
+                  <li>
+                    <a class="dropdown-item " href="#"><span class="me-2">
+                        <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_5543_19751)">
+                            <path d="M0 8.5H16V12.5H0V8.5Z" fill="#FFCE00" />
+                            <path d="M0 0.5H16V4.5H0V0.5Z" fill="black" />
+                            <path d="M0 4.5H16V8.5H0V4.5Z" fill="#DD0000" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_5543_19751">
+                              <rect width="16" height="12" fill="white" transform="translate(0 0.5)" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>Deutsch</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 <!-- End Footer
 ================================================== -->
 
@@ -252,6 +684,14 @@ ga('send', 'pageview');
 {% if page.layout == 'post' %}
 <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
 {% endif %}-->
+
+
+
+<script>
+   timeago.render(document.querySelectorAll('.timeago'));
+ </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+
 
 </body>
 </html>

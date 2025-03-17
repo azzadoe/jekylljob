@@ -7,7 +7,7 @@ tags: [teknologi]
 keywords: sejarah film, adegan ikonik, teknologi film, film thriller, efek visual, inovasi sinema
 description: "Jelajahi 10 adegan film yang mengubah sejarah sinema: dari inovasi CGI pertama, teknik kamera revolusioner, hingga adegan berani yang mendobrak norma sosial"
 toc: true
-image: assets/images/adegan-film.webp
+image: https://geeksui.codescandy.com/geeks/assets/images/job/job-brand-logo/job-list-logo-1.svg
 ---
 
 Dikutip dari ***[filmbarat.id](https://filmbarat.id)***, Sinema adalah medium yang terus berevolusi. Setiap era melahirkan adegan-adegan yang tidak hanya menghibur, tetapi juga menciptakan terobosan teknis atau budaya. Dari transisi film bisu ke bersuara, hingga penggunaan teknologi CGI yang memukau, momen-momen ini menjadi penanda kemajuan industri perfilman.  

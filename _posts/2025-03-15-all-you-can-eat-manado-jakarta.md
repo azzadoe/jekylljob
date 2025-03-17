@@ -7,7 +7,7 @@ tags: [wisata]
 keywords: ["AYCE", "Makanan Manado", "Restoran Jakarta", "Kuliner Manado", "Makanan Murah"]
 description: "Nikmati sensasi kuliner Manado di Jakarta dengan konsep All You Can Eat (AYCE) yang memanjakan selera dan ramah di kantong. Temukan rekomendasi restoran serta tips menikmati hidangan autentik Manado dalam panduan ini"
 toc: true
-image: assets/images/ayce.webp
+image: https://geeksui.codescandy.com/geeks/assets/images/job/job-brand-logo/job-list-logo-1.svg
 ---
 
 Dari ***[https://dineharmonia.id](https://dineharmonia.id)*** Di tengah riuhnya Jakarta, kota yang selalu bergerak, tersimpan sejuta pesona kuliner yang siap untuk dijelajahi. Salah satunya adalah masakan Manado yang terkenal dengan kekayaan rasanya. Bayangkan, perpaduan rasa pedas menggigit dan aroma rempah yang menggoda—sungguh mampu memicu selera makan siapa pun. Kini, semua kelezatan itu bisa Anda nikmati tanpa harus khawatir soal dompet, berkat konsep All You Can Eat (AYCE) makanan Manado yang murah di Jakarta.

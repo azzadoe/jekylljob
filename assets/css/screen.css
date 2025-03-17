@@ -49,10 +49,7 @@ pre {
 }
 
 .site-content {
-    min-height: 60vh;
-    padding-top: 1.5rem;
-    margin-top: 57px;
-    transition: all 0.4s;
+    ;
 }
 
 section {
@@ -304,9 +301,6 @@ span.post-read-more a:hover {
     margin-right: 5px;
 }
 
-.mainheading h1.sitetitle {
-    font-family: Righteous;
-}
 
 .mainheading h1.posttitle {
     font-weight: 700;
@@ -479,7 +473,7 @@ blockquote {
 }
 
 .graybg {
-    background-color: #fafafa;
+    background-image: #fafafa;
     padding: 40px 0 46px;
     position: relative;
 }
@@ -899,3 +893,4 @@ iframe {
     opacity: 0;
     transition: opacity .25s;
 }
+

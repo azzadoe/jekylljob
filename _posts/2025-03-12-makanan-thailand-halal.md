@@ -7,7 +7,7 @@ tags: [wisata]
 keywords: makanan khas thailand, makanan halal thailand, kuliner thailand, makanan enak, resep thailand, wisata kuliner, makanan halal
 description: "temukan 5 makanan khas Thailand yang enak, halal, dan menggugah selera. Artikel mendalam ini mengupas rahasia kuliner Thailand yang autentik dan ramah bagi pencinta makanan halal."
 toc: true
-image: assets/images/tom-yum.webp
+image: https://geeksui.codescandy.com/geeks/assets/images/job/job-brand-logo/job-list-logo-1.svg
 ---
 
 Dari ***[kulinerlezat.id](https://kulinerlezat.id)*** Thailand dikenal dengan kekayaan kulinernya yang luar biasa, memadukan rasa asam, pedas, manis, dan gurih dalam setiap hidangannya. Keunikan resep tradisional dan penggunaan rempah-rempah membuat setiap hidangan selalu menawarkan pengalaman rasa yang berbeda dan menarik.

@@ -4,6 +4,7 @@ title:  "5 Tradisi Unik dari Berbagai Suku di Indonesia"
 author: nanda
 categories: [wisata]
 tags: [wisata]
+featured: true 
 toc: true
 keywords: wisata unik, tradisi unik suku indonesia, budaya unik suku indonesia, tradisi makan besar, apa saja tradisi unik di indonesia
 image: assets/images/tradisi.webp

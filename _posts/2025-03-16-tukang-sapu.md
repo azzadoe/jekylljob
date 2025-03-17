@@ -1,6 +1,6 @@
 ---
 layout: job
-title:  "Rekomendasi Job F2P di Ragnarok M Classic"
+title:  "tukang sapu"
 author: nanda
 categories: [tutorial]
 tags: [tutorial]
