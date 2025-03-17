@@ -129,144 +129,159 @@ post_class: post-template
             </div>
 
             {% if page.previous.url %}
-            <div class="card-body">
-                <div>
-                    <div class="d-xl-flex">
-                        <div class="mb-3 mb-md-0">
-                            <!-- Img -->
-                            {% if page.previous and page.previous.image %}
-                            {% if site.lazyimages == "enabled" %}
-                              <img class="img-fluid lazyimg" 
-                                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" 
-                                   data-src="{{ page.previous.image | relative_url }}" 
-                                   alt="{{ page.previous.title }}">
-                            {% else %}
-                              <img class="img-fluid" src="{{ page.previous.image | relative_url }}" alt="{{ page.previous.title }}">
-                            {% endif %}
-                          {% endif %}
-                                                  </div>
-                        <!-- text -->
-                        <div class="ms-xl-3 w-100 mt-3 mt-xl-1">
-                            <div class="d-flex justify-content-between mb-5">
-                                <div>
-                                    <h3 class="mb-1 fs-4">
-                                        <a href="{{ site.baseurl }}{{page.previous.url}}" class="text-inherit">{{page.previous.title}}</a>
-                                        <span class="badge bg-danger-soft ms-2">{{ post.expired }}</span>
-                                    </h3>
-
-                                    <div>
-                                        <span>at {{ page.previous.at }}</span>
-                                        <span class="text-dark ms-2 fw-medium">
-                                            4.5
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-star-fill text-warning align-baseline" viewBox="0 0 16 16">
-                                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                                            </svg>
-                                        </span>
-                                        <span class="ms-0">(131 Reviews)</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark" viewBox="0 0 16 16">
-                                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="d-md-flex justify-content-between">
-                                <div class="mb-2 mb-md-0">
-                                    <span class="me-2">
-                                        <i class="fe fe-briefcase"></i>
-                                        <span class="ms-1">{{ page.previous.experience }}</span>
-                                    </span>
-                                    <span class="me-2">
-                                        <i class="fe fe-dollar-sign"></i>
-                                        <span class="ms-1">{{ page.previous.salary }}</span>
-                                    </span>
-                                    <span class="me-2">
-                                        <i class="fe fe-map-pin"></i>
-                                        <span class="ms-1">{{ page.previous.location }}</span>
-                                    </span>
-                                </div>
-                                <div>
-                                    <i class="fe fe-clock"></i>
-                                    <span> {{ page.previous.date | date: "%B %d, %Y" }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endif %}
+            <div class="card card-bordered mb-3 card-hover cursor-pointer">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class="d-xl-flex">
+                    <div class="mb-3 mb-md-0">
+                      <!-- Img -->
+                      {% if page.previous.image %}
             
-            {% if page.next.url %}
-            <div class="card-body">
-                <div>
-                    <div class="d-xl-flex">
-                        <div class="mb-3 mb-md-0">
-                            <!-- Img -->
-                            {% if page.next and page.next.image %}
-                            {% if site.lazyimages == "enabled" %}
-                              <img class="img-fluid lazyimg" 
-                                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" 
-                                   data-src="{{ page.next.image | relative_url }}" 
-                                   alt="{{ page.next.title }}">
-                            {% else %}
-                              <img class="img-fluid" src="{{ page.next.image | relative_url }}" alt="{{ page.next.title }}">
-                            {% endif %}
-                          {% endif %}
-                                                  </div>
-                        <!-- text -->
-                        <div class="ms-xl-3 w-100 mt-3 mt-xl-1">
-                            <div class="d-flex justify-content-between mb-5">
-                                <div>
-                                    <h3 class="mb-1 fs-4">
-                                        <a href="{{ site.baseurl }}{{page.next.url}}" class="text-inherit">{{page.next.title}}</a>
-                                        <span class="badge bg-danger-soft ms-2">{{ post.expired }}</span>
-                                    </h3>
-
-                                    <div>
-                                        <span>at {{ page.next.at }}</span>
-                                        <span class="text-dark ms-2 fw-medium">
-                                            4.5
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-star-fill text-warning align-baseline" viewBox="0 0 16 16">
-                                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                                            </svg>
-                                        </span>
-                                        <span class="ms-0">(131 Reviews)</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark" viewBox="0 0 16 16">
-                                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="d-md-flex justify-content-between">
-                                <div class="mb-2 mb-md-0">
-                                    <span class="me-2">
-                                        <i class="fe fe-briefcase"></i>
-                                        <span class="ms-1">{{ page.next.experience }}</span>
-                                    </span>
-                                    <span class="me-2">
-                                        <i class="fe fe-dollar-sign"></i>
-                                        <span class="ms-1">{{ page.next.salary }}</span>
-                                    </span>
-                                    <span class="me-2">
-                                        <i class="fe fe-map-pin"></i>
-                                        <span class="ms-1">{{ page.next.location }}</span>
-                                    </span>
-                                </div>
-                                <div>
-                                    <i class="fe fe-clock"></i>
-                                    <span> {{ page.next.date | date: "%B %d, %Y" }}</span>
-                                </div>
-                            </div>
-                        </div>
+                      {% if site.lazyimages == "enabled" %}
+                          <img class="icon-shape border rounded-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.previous.image contains "://" %}{{ page.previous.image }}{% else %}{{ site.baseurl }}/{{ page.previous.image }}{% endif %}" alt="{{ page.previous.title }}">
+                      {% else %}
+                          <img class="icon-shape border rounded-circle" src="{% if page.previous.image contains "://" %}{{ page.previous.image }}{% else %}{{ site.baseurl }}/{{ page.previous.image }}{% endif %}" alt="{{ page.previous.title }}"> 
+                      {% endif %}
+            
+                  {% endif %}
+            
                     </div>
+                    <!-- text -->
+                    <div class="ms-xl-3 w-100 mt-3 mt-xl-1">
+                      <div class="d-flex justify-content-between mb-5">
+                        <div>
+                          <h3 class="mb-1 fs-4">
+                            <a href="{{ site.baseurl }}{{ page.previous.url }}" class="text-inherit">{{ page.previous.title }}</a>
+                            <span class="badge bg-danger-soft ms-2">{{ page.previous.expired }}</span>
+                          </h3>
+            
+                          <div>
+                            <span>at {{ page.previous.at }}</span>
+                            <span class="text-dark ms-2 fw-medium">
+                              4.5
+                              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-star-fill text-warning align-baseline" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                              </svg>
+                            </span>
+                            <span class="ms-0">(131 Reviews)</span>
+                          </div>
+                        </div>
+                        <div>
+            <!-- Bookmark Icon -->
+            <a href="#" class="bookmark-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark" viewBox="0 0 16 16">
+                  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                </svg>
+              </a>
+              
+                          </div>
+                      </div>
+            
+                      <div class="d-md-flex justify-content-between">
+                        <div class="mb-2 mb-md-0">
+                          <span class="me-2">
+                            <svg aria-hidden="true"  width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M4 2V8H2V2H4M2 22V16H4V22H2M5 12C5 13.11 4.11 14 3 14C1.9 14 1 13.11 1 12C1 10.9 1.9 10 3 10C4.11 10 5 10.9 5 12M16 4C20.42 4 24 7.58 24 12C24 16.42 20.42 20 16 20C12.4 20 9.36 17.62 8.35 14.35L6 12L8.35 9.65C9.36 6.38 12.4 4 16 4M16 6C12.69 6 10 8.69 10 12C10 15.31 12.69 18 16 18C19.31 18 22 15.31 22 12C22 8.69 19.31 6 16 6M15 13V8H16.5V12.2L19.5 14L18.68 15.26L15 13Z"></path></svg>                <span class="ms-1">{{ page.previous.experience }}</span>
+                          </span>
+                          <span class="me-2">
+                            <svg aria-hidden="true" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z"></path></svg>
+                            <span class="ms-1">{{ page.previous.salary }}</span>
+                          </span>
+                          <span class="me-2">
+                            <svg aria-hidden="true" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path></svg>                <span class="ms-1">{{ page.previous.location }}</span>
+                          </span>
+                        </div>
+                        <div>
+                            <svg aria-hidden="true" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M9 8H11V14H9V8M13 1H7V3H13V1M17.03 7.39C18.26 8.93 19 10.88 19 13C19 17.97 15 22 10 22C5.03 22 1 17.97 1 13S5.03 4 10 4C12.12 4 14.07 4.74 15.62 6L17.04 4.56C17.55 5 18 5.46 18.45 5.97L17.03 7.39M17 13C17 9.13 13.87 6 10 6S3 9.13 3 13 6.13 20 10 20 17 16.87 17 13M21 7V13H23V7H21M21 17H23V15H21V17Z"></path></svg>              <span><time class="timeago" datetime="{{ page.previous.date | date_to_xmlschema }}">
+                            {{ page.previous.date | date: "%B %d, %Y" }}
+                          </time>
+                          
+            
+                        </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
+              </div>
             {% endif %}
+
+            {% if page.next.url %}
+<div class="card card-bordered mb-3 card-hover cursor-pointer">
+    <!-- card body -->
+    <div class="card-body">
+      <div class="d-xl-flex">
+        <div class="mb-3 mb-md-0">
+          <!-- Img -->
+          {% if page.next.image %}
+
+          {% if site.lazyimages == "enabled" %}
+              <img class="icon-shape border rounded-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.next.image contains "://" %}{{ page.next.image }}{% else %}{{ site.baseurl }}/{{ page.next.image }}{% endif %}" alt="{{ page.next.title }}">
+          {% else %}
+              <img class="icon-shape border rounded-circle" src="{% if page.next.image contains "://" %}{{ page.next.image }}{% else %}{{ site.baseurl }}/{{ page.next.image }}{% endif %}" alt="{{ page.next.title }}"> 
+          {% endif %}
+
+      {% endif %}
+
+        </div>
+        <!-- text -->
+        <div class="ms-xl-3 w-100 mt-3 mt-xl-1">
+          <div class="d-flex justify-content-between mb-5">
+            <div>
+              <h3 class="mb-1 fs-4">
+                <a href="{{ site.baseurl }}{{ page.next.url }}" class="text-inherit">{{ page.next.title }}</a>
+                <span class="badge bg-danger-soft ms-2">{{ page.next.expired }}</span>
+              </h3>
+
+              <div>
+                <span>at {{ page.next.at }}</span>
+                <span class="text-dark ms-2 fw-medium">
+                  4.5
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-star-fill text-warning align-baseline" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                  </svg>
+                </span>
+                <span class="ms-0">(131 Reviews)</span>
+              </div>
+            </div>
+            <div>
+<!-- Bookmark Icon -->
+<a href="#" class="bookmark-toggle">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+    </svg>
+  </a>
+  
+              </div>
+          </div>
+
+          <div class="d-md-flex justify-content-between">
+            <div class="mb-2 mb-md-0">
+              <span class="me-2">
+                <svg aria-hidden="true"  width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M4 2V8H2V2H4M2 22V16H4V22H2M5 12C5 13.11 4.11 14 3 14C1.9 14 1 13.11 1 12C1 10.9 1.9 10 3 10C4.11 10 5 10.9 5 12M16 4C20.42 4 24 7.58 24 12C24 16.42 20.42 20 16 20C12.4 20 9.36 17.62 8.35 14.35L6 12L8.35 9.65C9.36 6.38 12.4 4 16 4M16 6C12.69 6 10 8.69 10 12C10 15.31 12.69 18 16 18C19.31 18 22 15.31 22 12C22 8.69 19.31 6 16 6M15 13V8H16.5V12.2L19.5 14L18.68 15.26L15 13Z"></path></svg>                <span class="ms-1">{{ page.next.experience }}</span>
+              </span>
+              <span class="me-2">
+                <svg aria-hidden="true" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z"></path></svg>
+                <span class="ms-1">{{ page.next.salary }}</span>
+              </span>
+              <span class="me-2">
+                <svg aria-hidden="true" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path></svg>                <span class="ms-1">{{ page.next.location }}</span>
+              </span>
+            </div>
+            <div>
+                <svg aria-hidden="true" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M9 8H11V14H9V8M13 1H7V3H13V1M17.03 7.39C18.26 8.93 19 10.88 19 13C19 17.97 15 22 10 22C5.03 22 1 17.97 1 13S5.03 4 10 4C12.12 4 14.07 4.74 15.62 6L17.04 4.56C17.55 5 18 5.46 18.45 5.97L17.03 7.39M17 13C17 9.13 13.87 6 10 6S3 9.13 3 13 6.13 20 10 20 17 16.87 17 13M21 7V13H23V7H21M21 17H23V15H21V17Z"></path></svg>              <span><time class="timeago" datetime="{{ page.next.date | date_to_xmlschema }}">
+                {{ page.next.date | date: "%B %d, %Y" }}
+              </time>
+              
+
+            </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+ <div class="clearfix"></div>
             <!--end prev/next-->
             
         </div>
