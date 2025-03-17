@@ -10,7 +10,7 @@ description: "Analisis mendalam mengenai job yang cocok untuk pemain free-to-pla
 toc: true
 expired: EXPIRED
 experience: 1 - 6 years
-at: Cleaning Services
+at: AC Service
 salary: 3.000.000 - 4.000.000 IDR
 location: Seattle, Washington, USA
 image: https://geeksui.codescandy.com/geeks/assets/images/job/job-brand-logo/job-list-logo-1.svg
