@@ -69,8 +69,8 @@ ga('send', 'pageview');
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid px-0">
        <div class="d-flex">
-          <a class="navbar-brand" href="https://geeksui.codescandy.com/geeks/index.html">
-          <img src="https://geeksui.codescandy.com/geeks/assets/images/brand/logo/logo.svg" alt="Geeks high quality website templates created with Bootstrap 5." />
+          <a class="navbar-brand" href="{{ site.baseurl }}/">
+          <img src="https://geeksui.codescandy.com/geeks/assets/images/brand/logo/logo.svg" alt="{{ site.basename}}" />
           </a>
           <div class="dropdown d-none d-md-block">
              <button
@@ -80,69 +80,14 @@ ga('send', 'pageview');
                 data-bs-toggle="dropdown"
                 aria-expanded="false">
              <i class="fe fe-list me-2 align-middle"></i>
-             Category
+             Job Category
              </button>
              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li class="dropdown-submenu dropend">
-                   <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Web Development</a>
-                   <ul class="dropdown-menu">
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Bootstrap</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">React</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">GraphQl</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Gatsby</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Grunt</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Svelte</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Meteor</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">HTML5</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Angular</a>
-                      </li>
-                   </ul>
-                </li>
-                <li class="dropdown-submenu dropend">
-                   <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Design</a>
-                   <ul class="dropdown-menu">
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Graphic Design</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Illustrator</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">UX / UI Design</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Figma Design</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Adobe XD</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Sketch</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Icon Design</a>
-                      </li>
-                      <li>
-                         <a class="dropdown-item" href="https://geeksui.codescandy.com/geeks/pages/course-category.html">Photoshop</a>
-                      </li>
-                   </ul>
+                <li>
+                   <a class="dropdown-item dropdown-list-group-item " href="#">Web Development</a> </li>
+                <li>
+                   <a class="dropdown-item dropdown-list-group-item" href="#">Design</a>
+                  
                 </li>
                 <li>
                    <a href="https://geeksui.codescandy.com/geeks/pages/course-category.html" class="dropdown-item">Mobile App</a>
@@ -194,7 +139,7 @@ ga('send', 'pageview');
        <div class="collapse navbar-collapse" id="navbar-default2">
           <ul class="navbar-nav mx-auto">
              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{ site.baseurl }}">Home</a>
              </li>
              <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
@@ -467,8 +412,7 @@ ga('send', 'pageview');
               <div class="mb-4">
                 <img src="https://geeksui.codescandy.com/geeks/assets/images/brand/logo/logo.svg" alt="" class="logo-inverse ">
                 <div class="mt-4">
-                  <p>Geek is feature-rich components and beautifully Bootstrap UIKit for developers, built with bootstrap
-                    responsive framework.</p>
+                  <p>{{site.title}} merupakan {{site.description}}</p>
                   <!-- social media -->
                   <div class="fs-4 mt-4">
                     <!--Facebook-->
@@ -497,7 +441,7 @@ ga('send', 'pageview');
             <div class="offset-lg-1 col-lg-2 col-md-3 col-6">
               <div class="mb-4">
                 <!-- list -->
-                <h3 class="fw-bold mb-3">Company</h3>
+                <h3 class="fw-bold mb-3">Job Categories</h3>
                 <ul class="list-unstyled nav nav-footer flex-column nav-x-0">
                     {% assign categories_list = site.categories %}
                     {% if categories_list.first[0] == null %}

@@ -6,6 +6,195 @@ post_class: post-template
 ---
 
 
+
+<main>
+  <div class="h-lg-16rem h-10rem" style="background: url(https://geeksui.codescandy.com/geeks/assets/images/background/company-bg.jpg) no-repeat; background-position: center; background-size: cover"></div>
+  <section>
+      <!-- container -->
+      <div class="container">
+          <!-- row -->
+          <div class="row align-items-center">
+              <!-- col -->
+              <div class="col-12">
+                  <div class="d-md-flex align-items-center">
+                      <!-- img -->
+                      <div class="position-relative mt-n5">
+                          <img src="https://geeksui.codescandy.com/geeks/assets/images/job/png/job-logo.png" alt="logo" class="rounded-3 border">
+                      </div>
+
+                      <div class="w-100 ms-md-4 mt-4">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                  <!-- heading -->
+                                  <h1 class="mb-0">{{page.title}} </h1>
+
+                                  <div>
+                                      <!-- reviews -->
+                                      <span class="text-dark fw-medium">
+                                          4.5
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-star-fill text-warning align-baseline" viewBox="0 0 16 16">
+                                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                          </svg>
+                                      </span>
+                                      <span class="ms-0">(131 Reviews)</span>
+                                  </div>
+                              </div>
+                              <div>
+                                  <!-- button -->
+                                  <a href="{{ page.apply }}" class="btn btn-outline-primary">Apply Now</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!--DATA JOB START-->
+      <div class="container my-4">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <!-- Row 1: Experience, Work Level, Employee Type -->
+            <div class="row">
+              <!-- Experience -->
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <!-- Briefcase Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5V2h6v-.5A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5v7A1.5 1.5 0 0 1 14.5 13h-13A1.5 1.5 0 0 1 0 11.5v-7z"/>
+                  </svg>
+                  <div>
+                    <small class="text-muted">Experience</small>
+                    <div>{{ page.experience }}</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Work Level -->
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <!-- Award Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                    <path d="M9.669.864L8 0 6.331.864l-.927.461-.461.927L4.516 3 3.864 3.669 3.403 4.6l-.461.927L2 8l.461 1.531.461.927.461.927.461.927.927.461.927.461L8 16l1.669-.864.927-.461.461-.927L11.484 13l.652-.669.461-.927.461-.927.461-.927.461-.927L14 8l-.461-1.531-.461-.927-.461-.927-.461-.927-.461-.927-.927-.461L8 0z"/>
+                  </svg>
+                  <div>
+                    <small class="text-muted">Work Level</small>
+                    <div>{{ page.level }}</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Employee Type -->
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <!-- People Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                    <path d="M13 7c0 2.761-2.239 5-5 5s-5-2.239-5-5 2.239-5 5-5 5 2.239 5 5z"/>
+                    <path fill-rule="evenodd" d="M2.165 13.569A5.997 5.997 0 0 1 8 11c2.238 0 4.165 1.053 5.835 2.569.243.217.365.548.365.891 0 .69-.56 1.25-1.25 1.25H3.05c-.69 0-1.25-.56-1.25-1.25 0-.343.122-.674.365-.891z"/>
+                  </svg>
+                  <div>
+                    <small class="text-muted">Employee Type</small>
+                    <div>{{ page.employee }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Row 2: Offer Salary, Job Location, Date Posted -->
+            <div class="row mt-3">
+              <!-- Offer Salary -->
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <!-- Currency Dollar Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                    <path d="M8.5 13a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 4.418 3.58 8 8 8s8-3.582 8-8c0-4.42-3.58-8-8-8zm0 15C4.14 15 1 11.86 1 8S4.14 1 8 1s7 3.14 7 7-3.14 7-7 7z"/>
+                  </svg>
+                  <div>
+                    <small class="text-muted">Offer Salary</small>
+                    <div>{{ page.salary }}</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Job Location -->
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <!-- Geo Alt Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                    <path d="M8 0a5 5 0 0 0-5 5c0 1.933 1.16 4.396 3.165 6.813a28.212 28.212 0 0 0 1.67 1.71c.24.23.516.23.756 0a28.213 28.213 0 0 0 1.67-1.71C11.84 9.396 13 6.933 13 5a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+                  </svg>
+                  <div>
+                    <small class="text-muted">Job Location</small>
+                    <div>{{ page.street}}, {{ page.city}}, {{ page.region}}, {{ page.zip}}, {{ page.country}}</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Date Posted -->
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <!-- Calendar Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                    <path d="M14 4h-1V2a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1v2H6V2a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                    <path d="M0 6v1h16V6H0z"/>
+                  </svg>
+                  <div>
+                    <small class="text-muted">Date Posted</small>
+                    <div>{{ page.date | date: "%B %d, %Y" }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Row 3: Valid Through, Hiring Organization -->
+            <div class="row mt-3">
+              <!-- Valid Through -->
+              <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                  <!-- Calendar Event Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                    <path d="M1 2a1 1 0 0 1 1-1h1V0h1v1h6V0h1v1h1a1 1 0 0 1 1 1v2H1V2z"/>
+                    <path d="M0 5v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5H0z"/>
+                    <path d="M3 7a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"/>
+                  </svg>
+                  <div>
+                    <small class="text-muted">Valid Through</small>
+                    <div>{{ page.valid }}</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Hiring Organization -->
+              <div class="col-md-8">
+                <div class="d-flex align-items-center">
+                  <!-- Building Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15.285.076A.5.5 0 0 1 15.5.5v15a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-15a.5.5 0 0 1 .5-.424h14.785zM1 14h1V9H1v5zm2 0h1V5H3v9zm2 0h1V1H5v13zm2 0h1V4H7v10zm2 0h1V2h-1v12zm2 0h1V8h-1v6z"/>
+                  </svg>
+                  <div>
+                    <small class="text-muted">Hiring Organization</small>
+                    <div>{{ page.company }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--DATA JOB END-->
+  </section>
+  
+  <nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+<button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
+</div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">...</div>
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
+<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+<div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...</div>
+</div>
+
+
 <!-- Begin Article
 ================================================== -->
 
@@ -13,81 +202,95 @@ post_class: post-template
 <section class="py-lg-8 py-7">
     <div class="container my-lg-8">
         <div class="row">
-            <div class="offset-xl-2 col-xl-8 col-md-12">
+           
+          <div class="offset-xl-2 col-xl-8 col-md-12">
+            {% include breadcrumbs.html %}
+            <div class="card card-bordered mb-3 card-hover cursor-pointer">
+              <!-- card body -->
+              <div class="card-body">
                 <div class="d-xl-flex">
-                    <div class="mb-3 mb-md-0">
-                        <!-- Img -->
-
-                        {% if page.image %}
-
-                        {% if site.lazyimages == "enabled" %}
-                        <img class="icon-shape border rounded-circle lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
-                        {% else %}
-                        <img class="icon-shape border rounded-circle" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
-                        {% endif %}
-            
-                        {% endif %}
-                    </div>
-                    <!-- text -->
-                    <div class="ms-xl-3 w-100 mt-3 mt-xl-0">
-                        <div class="d-flex justify-content-between mb-5">
-                            <div>
-                                {% include breadcrumbs.html %}
-                                <h1 class="mb-1 h2">{{ page.title }}</h1>
-                                <div>
-                                    <span>at {{ page.at }}</span>
-                                    <!-- star -->
-                                    <span class="text-dark ms-2 fw-medium">
-                                        4.5
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-star-fill text-warning align-baseline" viewBox="0 0 16 16">
-                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                                        </svg>
-                                        <!-- text -->
-                                    </span>
-                                    <span class="ms-0">(131 Reviews)</span>
-                                </div>
-                            </div>
-                            <div>
-                                <!-- bookmark -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark" viewBox="0 0 16 16">
-                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"></path>
-                                </svg><button type="button" class="btn btn-primary btn-sm">Apply for Job</button>
-                                 
-                            </div>
-                        </div>
+                  <div class="mb-3 mb-md-0">
+                    <!-- Img -->
+                    {% if page.image %}
+          
+                    {% if site.lazyimages == "enabled" %}
+                        <img class="icon-shape border rounded-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+                    {% else %}
+                        <img class="icon-shape border rounded-circle" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}"> 
+                    {% endif %}
+          
+                {% endif %}
+          
+                  </div>
+                  <!-- text -->
+                   
+                  <div class="ms-xl-3 w-100 mt-3 mt-xl-1">
+                    <div class="d-flex justify-content-between mb-5">
+                      <div>
+                        <h3 class="mb-1 fs-4">
+                          <a href="{{ site.baseurl }}{{ page.url }}" class="text-inherit">{{ page.title }}</a>
+                          <span class="badge bg-danger-soft ms-2">{{ page.expired }}</span>
+                        </h3>
+          
                         <div>
-                            <!-- year -->
-                            <div class="d-md-flex justify-content-between">
-                                <div class="mb-2 mb-md-0">
-                                    <span class="me-2">
-                                        <svg aria-hidden="true"  width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M4 2V8H2V2H4M2 22V16H4V22H2M5 12C5 13.11 4.11 14 3 14C1.9 14 1 13.11 1 12C1 10.9 1.9 10 3 10C4.11 10 5 10.9 5 12M16 4C20.42 4 24 7.58 24 12C24 16.42 20.42 20 16 20C12.4 20 9.36 17.62 8.35 14.35L6 12L8.35 9.65C9.36 6.38 12.4 4 16 4M16 6C12.69 6 10 8.69 10 12C10 15.31 12.69 18 16 18C19.31 18 22 15.31 22 12C22 8.69 19.31 6 16 6M15 13V8H16.5V12.2L19.5 14L18.68 15.26L15 13Z"></path></svg>                                        
-                                         <span class="ms-1"><b>Eksperience: </b>{{ page.experience }}</span>
-                                    </span>
-                                    <!-- text -->
-                                    <span class="me-2">
-                                        <svg aria-hidden="true" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z"></path></svg>
-                                        <span class="ms-1"><b>Salary</b>{{ page.salary }}</span>
-                                    </span>
-                                    <!-- location -->
-                                    <span class="me-2">
-                                        <svg aria-hidden="true" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path></svg>                <span class="ms-1">{{ post.location }}</span>
-                                        <span class="ms-1"><b>location: </b>{{ page.location }}</span>
-                                    </span>
-                                </div>
-                                <div>
-                                    <!-- time -->
-                                    <svg aria-hidden="true" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M9 8H11V14H9V8M13 1H7V3H13V1M17.03 7.39C18.26 8.93 19 10.88 19 13C19 17.97 15 22 10 22C5.03 22 1 17.97 1 13S5.03 4 10 4C12.12 4 14.07 4.74 15.62 6L17.04 4.56C17.55 5 18 5.46 18.45 5.97L17.03 7.39M17 13C17 9.13 13.87 6 10 6S3 9.13 3 13 6.13 20 10 20 17 16.87 17 13M21 7V13H23V7H21M21 17H23V15H21V17Z"></path></svg>              <span><time class="timeago" datetime="{{ post.date | date_to_xmlschema }}">
-               <b>Post Date: </b> {{ page.date | date: "%B %d, %Y" }}
-              </time>
-                                </div>
-                            </div>
+                          <span>at {{ page.at }}</span>
+                          <span class="text-dark ms-2 fw-medium">
+                            4.5
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-star-fill text-warning align-baseline" viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                            </svg>
+                          </span>
+                          <span class="ms-0">(131 Reviews)</span>
+                        </div>
+                      </div>
+                      <div>
+          <!-- Bookmark Icon -->
+          <a href="#" class="bookmark-toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark" viewBox="0 0 16 16">
+                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+              </svg>
+            </a>
+            
                         </div>
                     </div>
+          
+                    <div class="d-md-flex justify-content-between">
+                      <div class="mb-2 mb-md-0">
+                        <span class="me-2">
+                          <svg aria-hidden="true"  width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M4 2V8H2V2H4M2 22V16H4V22H2M5 12C5 13.11 4.11 14 3 14C1.9 14 1 13.11 1 12C1 10.9 1.9 10 3 10C4.11 10 5 10.9 5 12M16 4C20.42 4 24 7.58 24 12C24 16.42 20.42 20 16 20C12.4 20 9.36 17.62 8.35 14.35L6 12L8.35 9.65C9.36 6.38 12.4 4 16 4M16 6C12.69 6 10 8.69 10 12C10 15.31 12.69 18 16 18C19.31 18 22 15.31 22 12C22 8.69 19.31 6 16 6M15 13V8H16.5V12.2L19.5 14L18.68 15.26L15 13Z"></path></svg>            
+                              <span class="ms-1">{{ page.experience }}</span>
+                        </span>
+                        <span class="me-2">
+                          <svg aria-hidden="true" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z"></path></svg>
+                          <span class="ms-1">{{ page.salary }}</span>
+                        </span>
+                        <span class="me-2">
+                          <svg aria-hidden="true" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path></svg>               
+                           <span class="ms-1">{{ page.location }}</span>
+                        </span>
+                      </div>
+                      <div>
+                          <svg aria-hidden="true" fill="currentColor" width="16" height="16" viewBox="0 0 24 24"><path d="M9 8H11V14H9V8M13 1H7V3H13V1M17.03 7.39C18.26 8.93 19 10.88 19 13C19 17.97 15 22 10 22C5.03 22 1 17.97 1 13S5.03 4 10 4C12.12 4 14.07 4.74 15.62 6L17.04 4.56C17.55 5 18 5.46 18.45 5.97L17.03 7.39M17 13C17 9.13 13.87 6 10 6S3 9.13 3 13 6.13 20 10 20 17 16.87 17 13M21 7V13H23V7H21M21 17H23V15H21V17Z"></path></svg>              <span><time class="timeago" datetime="{{ page.date | date_to_xmlschema }}">
+                          {{ page.date | date: "%B %d, %Y" }}
+                        </time>
+                        
+          
+                      </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+          
+
+
+
+
+            
                 <hr class="my-4">
                 <!-- text -->
                 
-
             <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
             {% if site.adsense == "enabled" %}
                 {% include adsense-under-header.html %}
@@ -127,6 +330,45 @@ post_class: post-template
             </div>
 
             </div>
+
+
+
+             <!-- Post Date -->
+             <p>
+              <small>
+                  <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
+                  {% if page.last_modified_at %}
+                  (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+                  {% endif %}
+                  </small>
+              </p>
+  
+              <!-- Post Categories -->
+              <div class="after-post-cats">
+                  <ul class="tags mb-4">
+                      {% assign sortedCategories = page.categories | sort %}
+                      {% for category in sortedCategories %}
+                      <li>
+                          <a class="smoothscroll" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>
+                      </li>
+                      {% endfor %}
+                  </ul>
+              </div>
+              <!-- End Categories -->
+  
+              <!-- Post Tags -->
+              <div class="after-post-tags">
+                  <ul class="tags">
+                      {% assign sortedTags = page.tags | sort %}
+                      {% for tag in sortedTags %}
+                      <li>
+                          <a class="smoothscroll" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">#{{ tag }}</a>
+                      </li>
+                      {% endfor %}
+                  </ul>
+              </div>
+
+
 
             {% if page.previous.url %}
             <div class="card card-bordered mb-3 card-hover cursor-pointer">
@@ -292,56 +534,6 @@ post_class: post-template
 
 
 
-<div class="container">
-    <div class="row">
-
-
-      
-
-            
-            <!-- Post Date -->
-            <p>
-            <small>
-                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
-                {% if page.last_modified_at %}
-                (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
-                {% endif %}
-                </small>
-            </p>
-
-            <!-- Post Categories -->
-            <div class="after-post-cats">
-                <ul class="tags mb-4">
-                    {% assign sortedCategories = page.categories | sort %}
-                    {% for category in sortedCategories %}
-                    <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- End Categories -->
-
-            <!-- Post Tags -->
-            <div class="after-post-tags">
-                <ul class="tags">
-                    {% assign sortedTags = page.tags | sort %}
-                    {% for tag in sortedTags %}
-                    <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">#{{ tag }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- End Tags -->
-
-            
-            <!-- Prev/Next -->
-            
-        <!-- End Post -->
-
-    </div>
-</div>
 <!-- End Article
 ================================================== -->
 
@@ -387,3 +579,42 @@ https://search.google.com/structured-data/testing-tool/u/0/
 
 
   
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "JobPosting",
+    "title" : "{{ page.title}}",
+    "description" : "{{ page.description}}",
+    "datePosted" : "{{ page.date | date: "%B %d, %Y" }}",
+    "hiringOrganization": {
+      "@type": "Organization",
+      "sameAs": "{{ page.companyurl}}",
+      "name": "{{ page.company}}"
+    },
+    "employmentType": ["{{ page.employee }}"],
+    "baseSalary": {
+      "@type": "MonetaryAmount",
+      "currency": "IDR",
+      "value": {
+        "@type": "QuantitativeValue",
+        "minValue": 0.21,
+        "maxValue": 0.21,
+        "unitText": "MONTH"
+      }
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "streetAddress": "{{ page.street}}",
+        "addressLocality": "{{ page.city}}",
+        "addressRegion": "{{ page.region}}",
+        "postalCode": "{{ page.zip}}",
+        "addressCountry": "{{ page.country }}"
+      }
+    }
+  }
+  </script>
