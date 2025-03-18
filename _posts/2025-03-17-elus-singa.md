@@ -13,7 +13,8 @@ apply: https://pediaku.id
 experience: 1 - 6 years
 level: Profesional
 at: Cleaning Services
-salary: 3.000.000 - 4.000.000 IDR
+salarymin: 3.000.000
+salarymax: 4.000.000
 location: Seattle, Washington, USA
 employee: Full Time/ Freelance
 valid: 2025-03-27

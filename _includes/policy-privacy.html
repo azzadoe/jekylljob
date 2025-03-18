@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Privacy Policy Generator</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      border-radius: 0.75rem;
+    }
+    .generator-header {
+      background-color: #0d6efd;
+      color: #fff;
+      padding: 1rem;
+      border-top-left-radius: 0.75rem;
+      border-top-right-radius: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <!-- Card Form Generator -->
+    <div class="card shadow-sm">
+      <div class="generator-header text-center">
+        <h2>Privacy Policy Generator</h2>
+      </div>
+      <div class="card-body">
+        <form id="policyForm">
+          <div class="mb-3">
+            <label for="companyName" class="form-label">Company Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="companyName"
+              placeholder="Enter your company name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="websiteUrl" class="form-label">Website URL</label>
+            <input
+              type="url"
+              class="form-control"
+              id="websiteUrl"
+              placeholder="https://example.com"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="contactEmail" class="form-label">Contact Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="contactEmail"
+              placeholder="contact@example.com"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="companyAddress" class="form-label">Company Address</label>
+            <textarea
+              class="form-control"
+              id="companyAddress"
+              rows="2"
+              placeholder="Enter your company address"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="effectiveDate" class="form-label">Effective Date</label>
+            <input
+              type="date"
+              class="form-control"
+              id="effectiveDate"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="contactPhone" class="form-label">Contact Phone</label>
+            <input
+              type="text"
+              class="form-control"
+              id="contactPhone"
+              placeholder="+62 812 3456 7890"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="language" class="form-label">Language</label>
+            <select class="form-select" id="language">
+              <option value="en" selected>English</option>
+              <option value="id">Indonesian</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Output Format</label>
+            <div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="outputFormat"
+                  id="formatHtml"
+                  value="html"
+                  checked
+                />
+                <label class="form-check-label" for="formatHtml">
+                  HTML
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="outputFormat"
+                  id="formatText"
+                  value="text"
+                />
+                <label class="form-check-label" for="formatText">
+                  Plain Text
+                </label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">
+            Generate Privacy Policy
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Card Hasil Generate -->
+    <div class="card shadow-sm mt-4 d-none" id="resultCard">
+      <div class="card-header bg-secondary text-white">
+        <h4 class="mb-0">Generated Privacy Policy</h4>
+      </div>
+      <div class="card-body">
+        <div id="policyOutput"></div>
+        <button id="copyButton" class="btn btn-outline-secondary mt-3">
+          Copy to Clipboard
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const policyForm = document.getElementById('policyForm');
+    const resultCard = document.getElementById('resultCard');
+    const policyOutput = document.getElementById('policyOutput');
+    const copyButton = document.getElementById('copyButton');
+
+    policyForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      // Ambil data input dari form
+      const companyName = document.getElementById('companyName').value.trim();
+      const websiteUrl = document.getElementById('websiteUrl').value.trim();
+      const contactEmail = document.getElementById('contactEmail').value.trim();
+      const companyAddress = document.getElementById('companyAddress').value.trim();
+      const effectiveDate = document.getElementById('effectiveDate').value;
+      const contactPhone = document.getElementById('contactPhone').value.trim();
+      const language = document.getElementById('language').value;
+      const outputFormat = document.querySelector('input[name="outputFormat"]:checked').value;
+      
+      // Template Privacy Policy yang sangat panjang, mendalam, dan profesional
+      let policyText = "";
+      if (language === "en") {
+        policyText += `<h3>Privacy Policy for ${companyName}</h3>`;
+        policyText += `<p><strong>Effective Date:</strong> ${effectiveDate}</p>`;
+        if(companyAddress) {
+          policyText += `<p><strong>Address:</strong> ${companyAddress}</p>`;
+        }
+        if(contactPhone) {
+          policyText += `<p><strong>Contact Phone:</strong> ${contactPhone}</p>`;
+        }
+        
+        policyText += `
+          <h4>1. Introduction</h4>
+          <p>This Privacy Policy ("Policy") sets out how ${companyName} collects, uses, discloses, and protects your personal data when you access our website at <a href="${websiteUrl}">${websiteUrl}</a>. We are committed to safeguarding your privacy and ensuring your personal information is handled in a safe and responsible manner.</p>
+          
+          <h4>2. Information We Collect</h4>
+          <p>We may collect, store, and use the following kinds of information:</p>
+          <ul>
+            <li><strong>Personal Data:</strong> Information such as your name, email address, postal address, phone number, and other details that you voluntarily provide when registering or contacting us.</li>
+            <li><strong>Usage Data:</strong> Information automatically collected as you navigate through our website, including your IP address, browser type, device details, pages visited, and duration of visits.</li>
+            <li><strong>Tracking Data:</strong> Information collected through cookies and similar technologies, which help us to improve your browsing experience and analyze website performance.</li>
+            <li><strong>Other Data:</strong> Any other information you provide through forms, surveys, or customer support interactions.</li>
+          </ul>
+          
+          <h4>3. How We Use Your Information</h4>
+          <p>Your data is used for a number of purposes, including:</p>
+          <ul>
+            <li>To operate and maintain our website and services.</li>
+            <li>To enhance and personalize your user experience through data analysis and feedback.</li>
+            <li>To communicate with you regarding updates, promotional offers, and customer support (subject to your consent where applicable).</li>
+            <li>To process transactions, manage your orders, and facilitate customer service requests.</li>
+            <li>For internal research, audits, and data analysis aimed at improving our service offerings.</li>
+          </ul>
+          
+          <h4>4. Cookies and Tracking Technologies</h4>
+          <p>We use cookies, web beacons, and similar tracking technologies to gather information about your usage of our website. Cookies enable us to enhance user experience, analyze trends, and administer the site. You may manage your cookie preferences through your browser settings, although disabling cookies may affect website functionality.</p>
+          
+          <h4>5. Data Security</h4>
+          <p>${companyName} takes data security very seriously and implements a variety of technical and organizational measures to protect your personal data from unauthorized access, alteration, disclosure, or destruction. However, no method of data transmission or storage is entirely secure, and we cannot guarantee absolute security.</p>
+          
+          <h4>6. Data Sharing and Disclosure</h4>
+          <p>We do not sell or lease your personal information to third parties. We may share your data with trusted service providers who assist in operating our website, processing payments, conducting data analysis, or providing customer support, all under strict confidentiality agreements. Additionally, we may disclose your information when required by law or to protect our rights.</p>
+          
+          <h4>7. Data Retention</h4>
+          <p>Your personal data is retained only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+          
+          <h4>8. International Data Transfers</h4>
+          <p>Your data may be transferred to, stored, and processed in countries outside your country of residence. In such cases, we ensure that appropriate safeguards are in place to protect your information in accordance with applicable data protection laws.</p>
+          
+          <h4>9. Your Rights and Choices</h4>
+          <p>You have the right to access, update, and delete your personal data, as well as the right to restrict or object to certain processing activities. If you wish to exercise any of these rights, please contact us at <a href="mailto:${contactEmail}">${contactEmail}</a>. We will respond to your request in accordance with applicable law.</p>
+          
+          <h4>10. Children's Privacy</h4>
+          <p>Our website is not intended for individuals under the age of 13, and we do not knowingly collect data from children. If you believe that we have inadvertently collected personal data from a child under 13, please contact us immediately so that we can take appropriate corrective measures.</p>
+          
+          <h4>11. Third-Party Links</h4>
+          <p>Our website may include links to other websites. Please note that we are not responsible for the privacy practices or content of these external sites. We encourage you to read the privacy policies of any third-party sites you visit.</p>
+          
+          <h4>12. Legal Basis for Processing</h4>
+          <p>We process your personal data based on your consent, as necessary for the performance of a contract, to comply with a legal obligation, or in accordance with our legitimate interests. In each case, we take care to balance our interests with your rights and freedoms.</p>
+          
+          <h4>13. Governing Law</h4>
+          <p>This Privacy Policy is governed by the laws of the jurisdiction in which ${companyName} operates. Any disputes arising out of or relating to this Policy shall be subject to the exclusive jurisdiction of the courts in that jurisdiction.</p>
+          
+          <h4>14. Complaints and Dispute Resolution</h4>
+          <p>If you have any complaints regarding our handling of your personal data, please contact us and we will make every effort to resolve your concerns promptly and fairly. You also have the right to lodge a complaint with a data protection authority if you believe your rights have been violated.</p>
+          
+          <h4>15. Policy Updates</h4>
+          <p>We reserve the right to modify this Privacy Policy at any time. Any changes will be posted on our website with an updated effective date. Your continued use of our website after such changes constitutes your acceptance of the new terms.</p>
+          
+          <h4>16. Data Retention and Archiving</h4>
+          <p>We maintain data retention policies to ensure that your personal data is not kept longer than necessary. Once your data is no longer needed for its original purpose, we securely dispose of it or anonymize it for further analysis.</p>
+          
+          <h4>17. Contact Information</h4>
+          <p>If you have any questions about this Privacy Policy or our data practices, please contact us using the information below:</p>
+          <p>
+            <strong>Email:</strong> <a href="mailto:${contactEmail}">${contactEmail}</a><br>
+            ${companyAddress ? `<strong>Address:</strong> ${companyAddress}<br>` : ''}
+            ${contactPhone ? `<strong>Phone:</strong> ${contactPhone}<br>` : ''}
+          </p>
+        `;
+      } else if (language === "id") {
+        policyText += `<h3>Kebijakan Privasi untuk ${companyName}</h3>`;
+        policyText += `<p><strong>Tanggal Efektif:</strong> ${effectiveDate}</p>`;
+        if(companyAddress) {
+          policyText += `<p><strong>Alamat:</strong> ${companyAddress}</p>`;
+        }
+        if(contactPhone) {
+          policyText += `<p><strong>Telepon:</strong> ${contactPhone}</p>`;
+        }
+        
+        policyText += `
+          <h4>1. Pendahuluan</h4>
+          <p>Kebijakan Privasi ("Kebijakan") ini menjelaskan bagaimana ${companyName} mengumpulkan, menggunakan, menyimpan, dan melindungi data pribadi Anda saat mengakses website kami di <a href="${websiteUrl}">${websiteUrl}</a>. Privasi dan keamanan data Anda adalah prioritas utama kami.</p>
+          
+          <h4>2. Informasi yang Dikumpulkan</h4>
+          <p>Kami mengumpulkan berbagai informasi untuk menyediakan layanan kami, termasuk:</p>
+          <ul>
+            <li><strong>Informasi Pribadi:</strong> Nama, email, alamat, nomor telepon, dan informasi lain yang Anda berikan secara sukarela.</li>
+            <li><strong>Data Penggunaan:</strong> Informasi seperti alamat IP, jenis browser, halaman yang dikunjungi, dan waktu akses.</li>
+            <li><strong>Cookies:</strong> Data kecil yang disimpan di perangkat Anda untuk membantu meningkatkan pengalaman pengguna dan analisis kinerja situs.</li>
+            <li><strong>Informasi Lain:</strong> Data lain yang Anda berikan melalui form, survei, atau interaksi dengan tim dukungan kami.</li>
+          </ul>
+          
+          <h4>3. Penggunaan Informasi</h4>
+          <p>Informasi yang kami kumpulkan digunakan untuk:</p>
+          <ul>
+            <li>Menyediakan dan memelihara website serta layanan kami.</li>
+            <li>Meningkatkan pengalaman pengguna melalui analisis dan personalisasi.</li>
+            <li>Berkomunikasi dengan Anda mengenai pembaruan, promosi, dan layanan pelanggan (dengan persetujuan apabila diperlukan).</li>
+            <li>Memproses transaksi dan permintaan dukungan.</li>
+            <li>Melakukan analisis internal dan riset guna meningkatkan layanan kami.</li>
+          </ul>
+          
+          <h4>4. Cookies dan Teknologi Pelacakan</h4>
+          <p>Kami menggunakan cookies dan teknologi pelacakan lainnya untuk memantau aktivitas di situs kami dan meningkatkan pengalaman pengguna. Anda dapat mengatur preferensi cookies melalui pengaturan browser, meskipun hal ini mungkin mempengaruhi beberapa fungsi situs.</p>
+          
+          <h4>5. Keamanan Data</h4>
+          <p>${companyName} menerapkan langkah-langkah keamanan yang sesuai untuk melindungi data pribadi Anda dari akses, perubahan, atau pengungkapan yang tidak sah. Namun, tidak ada sistem yang 100% aman di dunia digital.</p>
+          
+          <h4>6. Pengungkapan dan Berbagi Informasi</h4>
+          <p>Kami tidak menjual atau menyewakan data pribadi Anda kepada pihak lain. Informasi Anda dapat dibagikan kepada mitra terpercaya yang membantu dalam operasional situs atau layanan pelanggan, dengan jaminan kerahasiaan yang ketat. Pengungkapan juga dapat dilakukan apabila diwajibkan oleh hukum.</p>
+          
+          <h4>7. Penyimpanan Data</h4>
+          <p>Data pribadi Anda disimpan selama diperlukan untuk tujuan pengumpulan atau sesuai dengan peraturan perundang-undangan yang berlaku. Setelah tidak diperlukan, data akan dihapus atau dianonimkan dengan cara yang aman.</p>
+          
+          <h4>8. Transfer Data Internasional</h4>
+          <p>Data Anda mungkin dipindahkan ke dan disimpan di server di luar negara asal Anda. Kami memastikan transfer data dilakukan sesuai dengan standar perlindungan data yang berlaku.</p>
+          
+          <h4>9. Hak Pengguna</h4>
+          <p>Anda memiliki hak untuk mengakses, memperbarui, atau menghapus data pribadi Anda, serta hak untuk membatasi atau menolak pemrosesan data tertentu. Untuk menggunakan hak-hak tersebut, silakan hubungi kami di <a href="mailto:${contactEmail}">${contactEmail}</a>.</p>
+          
+          <h4>10. Privasi Anak</h4>
+          <p>Situs kami tidak ditujukan untuk anak-anak di bawah usia 13 tahun dan kami tidak secara sadar mengumpulkan data pribadi dari anak-anak. Jika Anda menemukan data anak yang dikumpulkan, silakan hubungi kami segera.</p>
+          
+          <h4>11. Tautan ke Situs Eksternal</h4>
+          <p>Website kami mungkin menyertakan tautan ke situs pihak ketiga. Kami tidak bertanggung jawab atas kebijakan privasi atau konten situs tersebut. Disarankan untuk membaca kebijakan privasi situs eksternal tersebut sebelum memberikan informasi pribadi.</p>
+          
+          <h4>12. Dasar Hukum Pemrosesan Data</h4>
+          <p>Pemrosesan data pribadi Anda didasarkan pada persetujuan, pelaksanaan kontrak, kewajiban hukum, atau kepentingan sah yang kami miliki, dengan tetap mengutamakan hak dan privasi Anda.</p>
+          
+          <h4>13. Hukum yang Berlaku</h4>
+          <p>Kebijakan ini diatur oleh hukum yang berlaku di wilayah operasional ${companyName}. Setiap sengketa yang timbul akan diselesaikan melalui jalur hukum yang berlaku.</p>
+          
+          <h4>14. Prosedur Pengaduan</h4>
+          <p>Jika Anda merasa hak privasi Anda telah dilanggar atau memiliki keluhan mengenai pengelolaan data pribadi, silakan hubungi kami. Kami akan berusaha menyelesaikan masalah tersebut secara internal, dan Anda juga berhak mengajukan pengaduan kepada otoritas pengawas terkait.</p>
+          
+          <h4>15. Perubahan Kebijakan</h4>
+          <p>Kami berhak untuk mengubah Kebijakan Privasi ini dari waktu ke waktu. Setiap perubahan akan dipublikasikan di situs kami dengan tanggal efektif yang baru. Penggunaan situs kami setelah perubahan dianggap sebagai penerimaan atas perubahan tersebut.</p>
+          
+          <h4>16. Retensi dan Arsip Data</h4>
+          <p>Kami memiliki kebijakan retensi data yang memastikan bahwa data pribadi tidak disimpan lebih lama dari yang diperlukan, kecuali diwajibkan oleh hukum. Data yang tidak lagi diperlukan akan diarsipkan atau dihapus dengan cara yang aman.</p>
+          
+          <h4>17. Informasi Kontak</h4>
+          <p>Untuk pertanyaan, klarifikasi, atau permintaan terkait Kebijakan Privasi ini, silakan hubungi kami melalui:</p>
+          <p>
+            <strong>Email:</strong> <a href="mailto:${contactEmail}">${contactEmail}</a><br>
+            ${companyAddress ? `<strong>Address:</strong> ${companyAddress}<br>` : ''}
+            ${contactPhone ? `<strong>Phone:</strong> ${contactPhone}<br>` : ''}
+          </p>
+        `;
+      }
+      
+      // Jika output format yang dipilih adalah plain text, hilangkan tag HTML
+      if (outputFormat === "text") {
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = policyText;
+        policyText = tempDiv.textContent || tempDiv.innerText;
+        policyOutput.textContent = policyText;
+      } else {
+        policyOutput.innerHTML = policyText;
+      }
+      
+      // Tampilkan hasil generate
+      resultCard.classList.remove("d-none");
+    });
+
+    // Fungsi copy to clipboard
+    copyButton.addEventListener("click", function () {
+      const textToCopy = policyOutput.textContent;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        copyButton.textContent = "Copied!";
+        setTimeout(() => {
+          copyButton.textContent = "Copy to Clipboard";
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>
