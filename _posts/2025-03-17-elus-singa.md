@@ -16,7 +16,7 @@ at: Cleaning Services
 salary: 3.000.000 - 4.000.000 IDR
 location: Seattle, Washington, USA
 employee: Full Time/ Freelance
-valid: 15 juli 2025
+valid: 2025-03-27
 company: PT Anu Sejahtera
 companyurl: https://an.co
 street: sahawan
