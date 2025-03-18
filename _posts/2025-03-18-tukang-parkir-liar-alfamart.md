@@ -1,31 +1,31 @@
 ---
 layout: job
-title:  "Software Engineer Google"
+title:  "Tukang Parkir Liar Alfamart"
 featured: false
 author: nanda
 categories: [software]
 tags: [software enginer]
-keywords: software enginer
+keywords: jadi tukang parkir liar di alfamart
 description: "menjadi software enginer di google"
 toc: true
-expired: EXPIRED
+expired: 
 apply: https://pediaku.id
-experience: 1 - 6 years
+experience: 0 years
 level: Profesional
-at: Cleaning Services
-salarymin: 3000000
-salarymax: 4000000
-location: Seattle, Washington, USA
+at: Tukang Parkir Alfamart
+salarymin: 1.000.000
+salarymax: 4.000.000
+location: Alfamart jawatengah
 employee: Full Time/ Freelance
 valid: 2025-03-27
-company: PT Anu Sejahtera
+company: PT Siyalan Sejahtera
 companyurl: https://an.co
-street: sahawan
-city: padang
-region: sumatera barat
-zip: 1025,
-country: Indonesia
-tumbnail: https://www.keyweo.com/wp-content/uploads/2022/04/google-logo-history.jpg
+street: siyalan
+city: Poro Poro Tengah
+region: Sulalewat
+zip:  0976,
+country: Wakanda
+tumbnail: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4AJx8bwDE0PUx9GuadzFCwMgNZtulvHCsJw&s
 image: https://geeksui.codescandy.com/geeks/assets/images/job/job-brand-logo/job-list-logo-1.svg
 ---
 
@@ -52,7 +52,7 @@ Google is a renowned technology company recognized for its innovative products a
 
 ## Getting to Know Lorem Ipsum: A Standard Text Since the 16th Century
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque elit at mi egestas, sit amet sodales magna blandit. Integer id sapien justo. Suspendisse potenti. Vivamus hendrerit, risus nec sagittis aliquet, mi purus dapibus nisl, in porttitor erat mi nec risus. Nunc congue nisi non purus pulvinar, nec dictum dui fermentum. Maecenas vestibulum risus id libero iaculis, vitae efficitur sapien egestas. Donec euismod purus vitae elit dignissim, quis porta metus aliquam.
+>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque elit at mi egestas, sit amet sodales magna blandit. Integer id sapien justo. Suspendisse potenti. Vivamus hendrerit, risus nec sagittis aliquet, mi purus dapibus nisl, in porttitor erat mi nec risus. Nunc congue nisi non purus pulvinar, nec dictum dui fermentum. Maecenas vestibulum risus id libero iaculis, vitae efficitur sapien egestas. Donec euismod purus vitae elit dignissim, quis porta metus aliquam.
 
 Sed auctor diam et est lacinia, ut dictum lorem malesuada. Curabitur et ornare orci. Praesent dignissim luctus suscipit. In sed odio vel metus consequat eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut lobortis nulla orci, nec convallis elit laoreet et. Nullam posuere purus id orci aliquet, id vestibulum mauris sagittis. Fusce dignissim justo vitae est facilisis dapibus.
 
